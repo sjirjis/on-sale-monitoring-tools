@@ -20,7 +20,7 @@ $(document).ready(function(){
 		$.ajax({URL: url, method: "GET"})
 		.done(function(response){
 			console.log('test');
-			return response;
+			console.log(response);
 		})
 	}
 });
