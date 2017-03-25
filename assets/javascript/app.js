@@ -18,8 +18,9 @@ $(document).ready(function(){
 
 	function apiCall(url){
 		$.ajax({URL: url, method: "GET"})
-			.done(function(response){
-				console.log(response);
-			})
+		.done(function(response){
+			console.log('test');
+			return response;
+		})
 	}
 });
