@@ -14,13 +14,13 @@
     <!-- jQuery API -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-    <script type="text/javascript" src="assets/javascript/app.js" async></script>
+    <script type="text/javascript" src="javascript/app.js" async></script>
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="jumbotron">
-                <h2>On Sale Monitoring Tools</h2>
+                <h2>On Sale Monitoring Dashboard</h2>
                 <br />
                 <div class="form-group">
                       <label for="select" class="control-label">Region</label>
@@ -113,5 +113,30 @@
             </div>
         </div>
     </div>
+
+<!-- <script type="text/javascript">
+$(document).ready(function(){
+    
+    $("#orgCode").keypress(function(e){
+        if(e.keyCode === 13){
+            $("#orgCodeBtn").click();
+        } else {
+            return;
+        }
+    });
+
+    $("#orgCodeBtn").on("click", function(){
+        var userInput = {
+            region: $("#regionSelect option:selected").val().trim(),
+            orgCode: $("#orgCode").val().trim()           
+        };
+
+        $.get('/', userInput, function(data){
+            console.log(userInput);
+        });     
+    });
+});
+</script> -->
+
 </body>
 </html>
