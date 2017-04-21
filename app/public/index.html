@@ -2,19 +2,21 @@
 <html>
 <head>
     <title>On Sale Monitoring</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    
-    <!-- http://bootswatch.com/darkly theme -->
-    <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css" />
-
     <!-- jQuery API -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- http://bootswatch.com/darkly theme -->
+    <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css" />
+
+    <!-- custom js file -->
     <script type="text/javascript" src="javascript/app.js" async></script>
+
 </head>
 <body>
     <div class="container">
@@ -35,8 +37,9 @@
                     </div>
                 <div class="form-group">
                   <label class="control-label">Web Products Client Code</label>
-                  <input class="form-control" id="orgCode" type="text" placeholder="Enter Org Code Here"><br />
-                  <button class="btn btn-info" id=orgCodeBtn type="button">Submit</button>
+                  <input class="form-control" id="orgCode" type="text" placeholder="Enter Client Code Here"><br />
+                  <button class="btn btn-info" id=orgInfoBtn type="button">Submit</button>
+                  <button class="btn btn-danger" id=stop type="button">Stop</button>
                 </div>
             </div>
         </div>
@@ -57,28 +60,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>16:51 PDT</td>
-                                <td>99</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>16:54 PDT</td>
-                                <td>108</td>
-                            </tr>                            
-                            <tr>
-                                <td>3</td>
-                                <td>16:57 PDT</td>
-                                <td>121</td>
-                            </tr>
                         </tbody>
                     </table>
               </div>
             </div>
             <div class="panel panel-primary col-xs-6">
               <div class="panel-heading">
-                <h3 class="panel-title">Event Listing Page Load</h3>
+                <h3 class="panel-title">Event Listing Page Load (dummy data)</h3>
               </div>
               <div class="panel-body">
                 <p id="plText"> Current page load time is: </p>
@@ -113,30 +101,21 @@
             </div>
         </div>
     </div>
-
-<!-- <script type="text/javascript">
-$(document).ready(function(){
-    
-    $("#orgCode").keypress(function(e){
-        if(e.keyCode === 13){
-            $("#orgCodeBtn").click();
-        } else {
-            return;
-        }
-    });
-
-    $("#orgCodeBtn").on("click", function(){
-        var userInput = {
-            region: $("#regionSelect option:selected").val().trim(),
-            orgCode: $("#orgCode").val().trim()           
-        };
-
-        $.get('/', userInput, function(data){
-            console.log(userInput);
-        });     
-    });
-});
-</script> -->
-
+    <div class="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Oops! Looks like something is wrong...</h4>
+          </div>
+          <div class="modal-body">
+            <p>Invalid client code entered</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="closeModal" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>   
 </body>
 </html>
