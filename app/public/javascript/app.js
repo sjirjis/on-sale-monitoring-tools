@@ -17,7 +17,8 @@ $(document).ready(function(){
 
         var userInput = {
             region: $("#regionSelect option:selected").val().trim(),
-            orgCode: $("#orgCode").val().trim().toUpperCase()           
+            orgCode: $("#orgCode").val().trim().toUpperCase(),
+            environment: $('#environmentSelect option:selected').val().trim()           
         };
 
         function ssCall(){

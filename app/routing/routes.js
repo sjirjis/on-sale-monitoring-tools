@@ -12,7 +12,8 @@ module.exports = function(app) {
 	app.post('/', function(req, res){
 		var orgCode = req.body.orgCode,
 		region = req.body.region,
-		apiUrl = "https://staging-" + region + "-proxy.tnew.info/" + orgCode + "/tessitura.asmx",
+		environment = req.body.environment,
+		apiUrl = "https://" + environment + "-" + region + "-proxy.tnew.info/" + orgCode + "/tessitura.asmx",
 		seatServerUrl = apiUrl + "/WebSeatServerConnectionCount";
 
 		if(validOrgCodes.indexOf(orgCode) >= 0){
