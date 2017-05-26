@@ -24,6 +24,7 @@
             <div class="jumbotron">
                 <h2>On Sale Monitoring Dashboard</h2>
                 <br />
+
                 <div class="form-group">
                       <label for="select" class="control-label">Region</label>
                       <div>
@@ -35,11 +36,7 @@
                         <br />
                       </div>
                 </div>
-                <div class="form-group">
-                  <label class="control-label">Web Products Client Code</label>
-                  <input class="form-control" id="orgCode" type="text" placeholder="Enter Client Code Here">
-                  <br />
-                </div>
+
                 <div class="form-group">
                   <label for="select" class="control-label">Environment</label>
                   <div>
@@ -47,11 +44,19 @@
                       <option>Staging</option>
                       <option>Production</option>                     
                     </select>
-                    <br />
-                    <button class="btn btn-info" id=orgInfoBtn type="button">Submit</button>
-                    <button class="btn btn-danger" id=stop type="button">Stop</button>                     
+                    <br />                    
                   </div>
+                </div> 
+
+                <div class="form-group">
+                  <label class="control-label">Web Products Client Code</label>
+                  <input class="form-control" id="orgCode" type="text" placeholder="Enter Client Code Here">
+                  <br />
+                    <button class="btn btn-info" id=orgInfoBtn type="button">Submit</button>
+                    <button class="btn btn-danger" id=stop type="button">Stop</button> 
+                  <br />
                 </div>
+
             </div>
         </div>
         <div class="row">
@@ -61,7 +66,7 @@
               </div>
               <div class="panel-body">
                 <p id="ssText"> Current seat server count is: </p>
-                <p id="ssRefreshText">(This data is refeshed every 3 minutes)</p>
+                <p id="ssRefreshText">(This data is refeshed every 2 minutes)</p>
                     <table class="table table-striped table-hover " id="ssTable">
                         <thead>
                             <tr>
@@ -75,7 +80,7 @@
                     </table>
               </div>
             </div>
-            <div class="panel panel-primary col-xs-6">
+<!--             <div class="panel panel-primary col-xs-6">
               <div class="panel-heading">
                 <h3 class="panel-title">Event Listing Page Load (dummy data)</h3>
               </div>
@@ -109,7 +114,7 @@
                         </tbody>
                     </table>
               </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="modal">

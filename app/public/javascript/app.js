@@ -41,7 +41,7 @@ $(document).ready(function(){
         };
 
         ssCall();
-        var ssCallInterval = setInterval(function(){ssCall()}, 60000 * 3);  
+        var ssCallInterval = setInterval(function(){ssCall()}, 60000 * 2);  
 
         $("#stop").on("click", function(event){
             clearInterval(ssCallInterval);
